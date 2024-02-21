@@ -1,0 +1,6 @@
+docker run -p 3000:80 9e58c4c8dbb4
+docker images -q jsapp:1.0 
+docker ps -l -q   
+docker ps
+docker build -t jsapp:1.0 .        
+
