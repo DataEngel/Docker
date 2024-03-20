@@ -1,6 +1,18 @@
-docker run -p 3000:80 9e58c4c8dbb4
-docker images -q jsapp:1.0 
-docker ps -l -q   
-docker ps
-docker build -t jsapp:1.0 .        
+docker run -p 3000:80 9e58c4c8dbb4:
+
+Descripción: Este comando ejecuta un contenedor Docker a partir de una imagen identificada por su hash o nombre. En este caso, se especifica que el puerto 3000 del host se redirija al puerto 80 del contenedor. El hash 9e58c4c8dbb4 identifica la imagen desde la cual se creará el contenedor.
+docker images -q jsapp:1.0:
+
+Descripción: Este comando lista las imágenes Docker. La opción -q indica que solo se deben mostrar los IDs de las imágenes, no sus detalles completos. jsapp:1.0 es el nombre y la etiqueta de la imagen que se desea listar.
+docker ps -l -q:
+
+Descripción: Este comando muestra los IDs de los últimos contenedores que se han ejecutado. La opción -l indica que solo se debe mostrar el último contenedor que se ejecutó. La opción -q especifica que solo se deben mostrar los IDs de los contenedores, no sus detalles completos.
+docker ps:
+
+Descripción: Este comando muestra una lista de contenedores Docker que están actualmente en ejecución. Proporciona detalles como el ID del contenedor, el nombre, el ID de la imagen, los puertos expuestos, etc.
+docker build -t jsapp:1.0 .:
+
+Descripción: Este comando construye una nueva imagen Docker a partir de un Dockerfile ubicado en el directorio actual (.). La opción -t permite etiquetar la imagen resultante con un nombre y una etiqueta. En este caso, la imagen se etiqueta como jsapp:1.0. Esto es útil para identificar y referenciar la imagen fácilmente en futuros comandos o tareas de Docker.
+
+
 
