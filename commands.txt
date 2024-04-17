@@ -15,4 +15,21 @@ docker build -t jsapp:1.0 .:
 Descripción: Este comando construye una nueva imagen Docker a partir de un Dockerfile ubicado en el directorio actual (.). La opción -t permite etiquetar la imagen resultante con un nombre y una etiqueta. En este caso, la imagen se etiqueta como jsapp:1.0. Esto es útil para identificar y referenciar la imagen fácilmente en futuros comandos o tareas de Docker.
 
 
+To enter interactive mode with Docker commands, you typically use the -it flag. This flag allows you to interact with the container's command line once it's started. Here's a basic example:
+
+bash
+Copy code
+docker run -it <image_name> <command>
+Replace <image_name> with the name of the Docker image you want to run and <command> with the command you want to execute inside the container.
+
+For example, if you want to enter the bash shell of a Ubuntu container interactively, you can use:
+
+bash
+Copy code
+docker run -it ubuntu bash
+This command will start a new Ubuntu container and launch a bash shell, allowing you to interact with it.
+
+Once inside the container, you can execute various commands, install packages, modify files, etc. When you're done, you can exit the container, and it will stop running. To exit the interactive session, you can simply type exit and press Enter.
+
+
 
